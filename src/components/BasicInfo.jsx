@@ -7,11 +7,11 @@ function BasicInfo() {
    const [fullName, setFullName] = useState('');
    const [email, setEmail] = useState('');
    const [phone, setPhone] = useState('');
-   const [shown, setShown] = useState(false);
+   const [display, setDisplay] = useState(false);
 
 
-   function toggleShown() {
-      setShown(!shown);
+   function toggleDisplay() {
+      setDisplay(!display);
    };
 
    function handleChange(e) {
@@ -35,21 +35,21 @@ function BasicInfo() {
    return (
       <div className="basic-information info-component">
          <div className="form-header">
-            <div className="title">
-               <h2><Icon path={mdiAccount} size={1} className="account" /> Basic Information</h2>
+            <div className="form-title">
+               <h2><Icon path={mdiAccount} size={1} className="account form-icon" /> Basic Information</h2>
             </div>
             <div className="toggle-arrow">
                <Icon 
-                  path={shown ? mdiArrowDownDropCircleOutline : mdiArrowUpDropCircleOutline} 
+                  path={display ? mdiArrowUpDropCircleOutline : mdiArrowDownDropCircleOutline} 
                   size={1} 
-                  onClick={toggleShown}
-                  className="arrows"
+                  onClick={toggleDisplay}
+                  className="arrows form-icon"
                />
             </div>
          </div>
 
 
-         {shown && (
+         {display && (
             <form>
                <div className="input-container">
                   <label htmlFor="fullName">Full Name</label>
