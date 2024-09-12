@@ -6,8 +6,8 @@ import { mdiArrowDownDropCircleOutline, mdiArrowUpDropCircleOutline } from "@mdi
 function Education() {
    const [schoolName, setSchoolName] = useState('');
    const [study, setStudy] = useState('');
-   const [startDate, setStartDate] = useState('');
-   const [endDate, setEndDate] = useState('');
+   const [startDateSchool, setStartDateSchool] = useState('');
+   const [endDateSchool, setEndDateSchool] = useState('');
    const [display, setDisplay] = useState(false);
 
    function toggleDisplay() {
@@ -25,18 +25,18 @@ function Education() {
          case 'study':
             setStudy(value);
             break;
-         case 'startDate':
-            setStartDate(value);
+         case 'startDateSchool':
+            setStartDateSchool(value);
             break;
-         case 'endDate':
-            setEndDate(value);
+         case 'endDateSchool':
+            setEndDateSchool(value);
             break;
       }
       e.preventDefault();
    };
 
    return (
-      <div className="education-information education-component">
+      <div className="education-information info-component">
          <div className="form-header">
             <div className="form-title">
                <h2><Icon path={mdiSchool} size={1} className="school form-icon" /> Education</h2>
@@ -58,7 +58,7 @@ function Education() {
                   <input
                      type="text"
                      name="schoolName"
-                     placeholder="Enter the name of your School"
+                     placeholder="Enter the School Name"
                      value={schoolName}
                      id="schoolName"
                      onChange={handleChange}
@@ -77,24 +77,24 @@ function Education() {
                   />
                </div>
 
-               <div className="input-container">
-                  <label htmlFor="startDate">Start Date</label>
+               <div className="date-container">
+                  <label htmlFor="startDateSchool">Start Date</label>
                   <input
                      type="date"
-                     name="startDate"
-                     value={startDate}
-                     id="startDate"
+                     name="startDateSchool"
+                     value={startDateSchool}
+                     id="startDateSchool"
                      onChange={handleChange}
                   />
                </div>
                
-               <div className="input-container">
-                  <label htmlFor="endDate">End Date</label>
+               <div className="date-container">
+                  <label htmlFor="endDateSchool">End Date</label>
                   <input
                      type="date"
-                     name="endDate"
-                     value={endDate}
-                     id="endDate"
+                     name="endDateSchool"
+                     value={endDateSchool}
+                     id="endDateSchool"
                      onChange={handleChange}
                   />
                </div>
