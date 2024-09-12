@@ -1,4 +1,11 @@
+@font-face {
+   font-family: 'Inria Sans';
+   src: url('./assets/fonts/InriaSans-Regular.ttf') format('.ttf');
+}
+
+
 #root {
+  font-family: Inria Sans; 
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;

@@ -1,6 +1,6 @@
 import Icon from "@mdi/react";
 import { mdiFileDocumentOutline } from "@mdi/js";
-import './header.css'
+import './Header.css';
 
 function Header() {
    return (
