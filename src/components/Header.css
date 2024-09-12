@@ -1,3 +1,22 @@
-.page-heading h1 {
-   margin-top: 0;
+/* Header/Footer */
+
+header {
+   width: 100%;
+   border-bottom: 2px solid black;
+   border-bottom-left-radius: 1rem;
+   border-bottom-right-radius: 1rem;
+   box-shadow: 0px 10px 22px -3px rgba(0,0,0,0.1);
+   background-color: palevioletred;
+}
+
+footer {
+   width: 100%;
+   position: sticky;
+   bottom: 0;
+   background-color: palevioletred;
+}
+
+footer p {
+   margin: 0;
+   padding: 1rem;
 }

@@ -62,6 +62,7 @@ function Education() {
                      value={schoolName}
                      id="schoolName"
                      onChange={handleChange}
+                     required
                   />
                </div>
 

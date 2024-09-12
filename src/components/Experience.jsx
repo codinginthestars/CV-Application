@@ -66,6 +66,7 @@ function WorkExperience() {
                      value={companyName}
                      id="companyName"
                      onChange={handleChange}
+                     required
                   />
                </div>
 
@@ -78,10 +79,11 @@ function WorkExperience() {
                      value={jobTitle}
                      id="jobTitle"
                      onChange={handleChange}
+                     required
                   />
                </div>
 
-               <div className="textArea-container">
+               <div className="textArea-container input-container">
                   <label htmlFor="responsibilities">Responsibilities</label>
                   <textarea 
                      id="responsibilities" 
@@ -100,6 +102,7 @@ function WorkExperience() {
                      value={startDateJob}
                      id="startDateJob"
                      onChange={handleChange}
+                     required
                   />
                </div>
 

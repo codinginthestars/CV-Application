@@ -60,6 +60,7 @@ function BasicInfo() {
                      value={fullName}
                      id="fullName"
                      onChange={handleChange}
+                     required
                   />
                </div>
 
@@ -72,6 +73,7 @@ function BasicInfo() {
                      value={email}
                      id="email"
                      onChange={handleChange}
+                     required
                   />
                </div>
 
@@ -84,6 +86,7 @@ function BasicInfo() {
                      value={phone}
                      id="phone"
                      onChange={handleChange}
+                     required
                   />
                </div>
 
