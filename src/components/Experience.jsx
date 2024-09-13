@@ -3,7 +3,7 @@ import Icon from "@mdi/react";
 import { mdiBriefcase } from "@mdi/js";
 import { mdiArrowDownDropCircleOutline, mdiArrowUpDropCircleOutline } from "@mdi/js";
 
-function WorkExperience() {
+function WorkExperience({ isSubmit, className }) {
    const [companyName, setCompanyName] = useState('');
    const [jobTitle, setJobTitle] = useState('');
    const [responsibilities, setResponsibilities] = useState('');
@@ -40,7 +40,7 @@ function WorkExperience() {
    };
 
    return (
-      <div className="work-information info-component">
+      <div className={"work-information info-component " + className}>
          <div className="form-header">
             <div className="form-title">
                <h2><Icon path={mdiBriefcase} size={1} className="briefcase form-icon" /> Work Experience</h2>
@@ -121,6 +121,18 @@ function WorkExperience() {
                   <button className="add-button" type="submit">Add</button>
                </div>
             </form>
+         )}
+
+         {isSubmit && (
+            <>
+               <h1>{companyName}</h1>
+               <div>
+                  <p>{jobTitle}</p>
+                  <p>{responsibilities}</p>
+                  <p>{startDateJob}</p>
+                  <p>{endDateJob}</p>
+               </div>
+            </>
          )}
       </div>
    );

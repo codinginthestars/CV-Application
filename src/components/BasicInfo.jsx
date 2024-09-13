@@ -3,7 +3,7 @@ import Icon from "@mdi/react";
 import { mdiAccount } from "@mdi/js";
 import { mdiArrowDownDropCircleOutline, mdiArrowUpDropCircleOutline } from "@mdi/js";
 
-function BasicInfo() {
+function BasicInfo({ isSubmit, className }) {
    const [fullName, setFullName] = useState('');
    const [email, setEmail] = useState('');
    const [phone, setPhone] = useState('');
@@ -33,7 +33,7 @@ function BasicInfo() {
    };
 
    return (
-      <div className="basic-information info-component">
+      <div className={"basic-information info-component " + className}>
          <div className="form-header">
             <div className="form-title">
                <h2><Icon path={mdiAccount} size={1} className="account form-icon" /> Basic Information</h2>
@@ -91,9 +91,19 @@ function BasicInfo() {
                </div>
 
                <div className="buttons">
-                  <button className="add-button" type="submit">Add</button>
+                  <button className="edit-button" type="button">Edit</button>
                </div>
             </form>
+         )}
+
+         {isSubmit && (
+            <>
+               <h1>{fullName}</h1>
+               <div>
+                  <p>{email}</p>
+                  <p>{phone}</p>
+               </div>
+            </>
          )}
       </div>
    );

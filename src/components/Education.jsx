@@ -3,7 +3,7 @@ import Icon from "@mdi/react";
 import { mdiSchool } from "@mdi/js";
 import { mdiArrowDownDropCircleOutline, mdiArrowUpDropCircleOutline } from "@mdi/js";
 
-function Education() {
+function Education({ isSubmit, className }) {
    const [schoolName, setSchoolName] = useState('');
    const [study, setStudy] = useState('');
    const [startDateSchool, setStartDateSchool] = useState('');
@@ -36,7 +36,7 @@ function Education() {
    };
 
    return (
-      <div className="education-information info-component">
+      <div className={"education-information info-component " + className}>
          <div className="form-header">
             <div className="form-title">
                <h2><Icon path={mdiSchool} size={1} className="school form-icon" /> Education</h2>
@@ -104,6 +104,17 @@ function Education() {
                   <button className="add-button" type="submit">Add</button>
                </div>
             </form>
+         )}
+
+         {isSubmit && (
+            <>
+               <h1>{schoolName}</h1>
+               <div>
+                  <p>{study}</p>
+                  <p>{startDateSchool}</p>
+                  <p>{endDateSchool}</p>
+               </div>
+            </>
          )}
       </div>
    );
